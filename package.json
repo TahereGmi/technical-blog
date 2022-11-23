@@ -2,6 +2,7 @@
   "name": "stay-in-community",
   "version": "0.1.0",
   "private": true,
+  "author": "Tahere",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
