@@ -24,7 +24,7 @@ export default function Home() {
             Blog
           </Link>
         </p>
-        <div>test</div>
+        <span>test</span>
       </main>
 
       <footer className={styles.footer}>
