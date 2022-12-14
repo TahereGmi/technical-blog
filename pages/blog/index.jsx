@@ -4,7 +4,7 @@ import posts from '../../public/posts.json'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-export default function Blog() {
+const Blog = () => {
     const router = useRouter()
     return (
         <div className={styles.container}>
@@ -33,3 +33,5 @@ export default function Blog() {
         </div>
     )
 }
+
+export default Blog

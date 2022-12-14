@@ -3,7 +3,7 @@ import styles from '../../styles/Home.module.css'
 import posts from '../../public/posts.json'
 import { useRouter } from 'next/router'
 
-export default function Blog() {
+const SingleBlog = () => {
     const router = useRouter()
 
     const post = posts[router.query.id]
@@ -28,3 +28,5 @@ export default function Blog() {
         </div>
     )
 }
+
+export default SingleBlog
