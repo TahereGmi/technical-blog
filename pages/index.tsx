@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import styled from "styled-components";
 import styles from '../styles/Home.module.css'
+
+export const Title = styled.h1 ` color: blue; `
 
 const Home = () => {
   return (
@@ -13,9 +16,9 @@ const Home = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <Title>
           Home Page
-        </h1>
+        </Title>
 
         <p className={styles.description}>
           <Link 
