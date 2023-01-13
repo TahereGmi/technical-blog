@@ -1,9 +1,15 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
+import { useSelector, useDispatch } from 'react-redux'
+import { increment, decrement, selectedValue } from '../store/reducers/counterReducer'
+import { getVendors } from '../store/reducers/vendorsReducer'
+import type {} from 'redux-thunk/extend-redux';
+
 import styles from '../styles/Home.module.css'
 
 const Home = () => {
+  const count = useSelector(selectedValue)
+  const dispatch = useDispatch()
   return (
     <div className={styles.container}>
       <Head>
@@ -18,26 +24,23 @@ const Home = () => {
         </h1>
 
         <p className={styles.description}>
+          links:
           <Link 
             href='/vendors'>
             Vendors
           </Link>
         </p>
-        <span>test</span>
+        <div>
+          <h1>redux test</h1>
+          <span>the counter value is {count}</span>
+          <br />
+          <button onClick={() => dispatch(increment())}>Increment</button>
+          <button onClick={() => dispatch(decrement())}>Decrement</button>
+          <br />
+          <button onClick={() => dispatch(getVendors({ page: 0, page_size:10, lat: 35.754, long: 51.328 }))}>get snapp food vendors list</button>
+        </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
