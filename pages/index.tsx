@@ -19,8 +19,8 @@ const Home = () => {
 
         <p className={styles.description}>
           <Link 
-            href='/blog'>
-            Blog
+            href='/vendors'>
+            Vendors
           </Link>
         </p>
         <span>test</span>
