@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useSelector, useDispatch } from 'react-redux'
 import { increment, decrement, selectedValue } from '../store/reducers/counterReducer'
-import { getVendors } from '../store/reducers/vendorsReducer'
 import type {} from 'redux-thunk/extend-redux';
 
 import styles from '../styles/Home.module.css'
@@ -26,8 +25,8 @@ const Home = () => {
         <p className={styles.description}>
           links:
           <Link 
-            href='/vendors'>
-            Vendors
+            href='/blog'>
+            blog
           </Link>
         </p>
         <div>
@@ -36,8 +35,6 @@ const Home = () => {
           <br />
           <button onClick={() => dispatch(increment())}>Increment</button>
           <button onClick={() => dispatch(decrement())}>Decrement</button>
-          <br />
-          <button onClick={() => dispatch(getVendors({ page: 0, page_size:10, lat: 35.754, long: 51.328 }))}>get snapp food vendors list</button>
         </div>
       </main>
 
