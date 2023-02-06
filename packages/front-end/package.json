@@ -1,5 +1,5 @@
 {
-  "name": "stay-in-community",
+  "name": "technical-blog",
   "version": "0.1.0",
   "private": true,
   "author": "Tahereh",
@@ -34,7 +34,11 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0"
+    "@commitlint/config-conventional": "^17.3.0",
+    "lerna": "^6.4.1"
   },
-  "resolutions": {}
+  "resolutions": {},
+  "workspaces": [
+    "packages/*"
+  ]
 }
